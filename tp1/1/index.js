@@ -12,7 +12,6 @@ exports = module.exports = {
     for (let i = 1; i < input.length; i++) {
       depasse = input[i].split(' ')      
       place = place + parseInt(depasse[0]) - parseInt(depasse[1])
-      console.log(place)
     }
     
     if (place <= 100) {

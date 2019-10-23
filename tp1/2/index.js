@@ -7,7 +7,17 @@ exports = module.exports = {
   datasets,
   algo: function (input) {
     // YOUR CODE BETWEEN HERE
-
+    weigth = 0
+    nbr_aller_retour = 0
+    for (let i = 1; i < parseInt(input[0 + 1]); i++) {
+      if ( (weigth + parseInt(input[i])) > 100 ) {
+        weigth = 0
+        nbr_aller_retour += 1
+      }
+      
+      weigth = weigth + parseInt(input[i])
+    }
+    return nbr_aller_retour
     // AND HERE
   },
   verify: function (dataset, output) {
