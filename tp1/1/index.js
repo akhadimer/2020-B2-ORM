@@ -7,7 +7,23 @@ exports = module.exports = {
   datasets,
   algo: function (input) {
     // YOUR CODE BETWEEN HERE
+    place = input[0]
 
+    for (let i = 1; i < input.length; i++) {
+      depasse = input[i].split(' ')      
+      place = place + parseInt(depasse[0]) - parseInt(depasse[1])
+      console.log(place)
+    }
+    
+    if (place <= 100) {
+      return 1000
+    }
+    else if (place <= 10000 && place > 100) {
+      return 100
+    }
+    else if (place > 1000) {
+      return 'KO'
+    }
     // AND HERE
   },
   verify: function (dataset, output) {
